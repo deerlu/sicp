@@ -1,0 +1,6 @@
+(define (pascal-tri n m)
+	(cond ((= 0 m) 1)
+		  ((= m n) 1)
+		  ((> m n)
+		  	(error "invalid column"))
+		  (else (+ (pascal-tri (- n 1) (- m 1)) (pascal-tri (- n 1) m)))))
